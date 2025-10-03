@@ -1,0 +1,1166 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Швидка Діагностика Астенії</title>
+    <link rel="icon" type="image/jfif" href="img/IconSite.jfif" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <style>
+      @font-face {
+        font-family: "CenturyGothic";
+        src: url("fonts/centurygothic.ttf") format("truetype");
+        font-weight: 400; /* обычный */
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: "CenturyGothic";
+        src: url("fonts/centurygothic_bold.ttf") format("truetype");
+        font-weight: 700; /* жирный */
+        font-style: normal;
+      }
+      .poppins {
+        font-family: "Poppins", sans-serif;
+        font-size: 24px;
+        font-weight: 700;
+        color: #e74c3c;
+      }
+      .montserrat {
+        font-family: "CenturyGothic", sans-serif;
+        font-size: 24px;
+        font-weight: 300;
+        letter-spacing: 2px;
+      }
+      .headertextmontserrat
+      {
+        font-family: "CenturyGothic", sans-serif;
+        font-size: 6px;
+        font-weight: 300;
+        letter-spacing: 2px;
+      }
+      .pacifico {
+        font-family: "Pacifico", cursive;
+        font-size: 24px;
+        color: #8e44ad;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+      }
+      .cardbackgroundcolor {
+        background-color: #ffdfc4;
+      }
+      .siteantiquewhitebackgroundcolor {
+        background-color: antiquewhite;
+      }
+      .bachgroundimage {
+        background-image: url("BackGroundImage.jpg");
+      }
+
+      body {
+        background: linear-gradient(to right, #6ba0f0, #ffe5cc, #6ba0f0);
+      }
+      .card-body {
+  padding: 1rem;
+}
+.question-header {
+  background-color: #FF6600;
+  color: white;
+  font-weight: 600;
+  border-top-left-radius: 0.25rem;   /* скругление верхних углов */
+  border-top-right-radius: 0.25rem;
+  padding: 1rem;
+}
+.answers-spacing label {      /* чтобы каждый вариант был на отдельной строке */
+  margin-bottom: 10px;  /* расстояние между вариантами */
+}
+input[type="radio"] {
+  transform: scale(1.5); /* увеличивает в 1.5 раза */
+  margin: 5px;
+}
+      /* body {
+        margin: 0;
+        height: 100vh;
+        background: linear-gradient(-45deg, #ff8000, #ffae42, #ff5e00, #ffa94d);
+        background-size: 400% 400%;
+        animation: gradient 6s ease infinite;
+      }
+
+      @keyframes gradient {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+
+      .content {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 2rem;
+        font-weight: bold;
+        text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+      } */
+    </style>
+  </head>
+  <body class="siteantiquewhitebackgroundcolor">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-6 col-lg-6 mx-auto">
+          <img
+            src="img/HeaderImage.jpg"
+            style="display: block; margin: 0 auto"
+            class="img-fluid"
+          />
+          <div class="montserrat">
+            <h1 class="text-start" style="font-weight: 600;">Діагностика рівня втоми</h1>
+            <h3 class="text-start">
+              За допомогою простого та інформативного методу дізнайтесь - чи є у
+              вас прояви астенії?
+            </h2>
+            <br>
+            <h2 class="text-start">
+              Лише виберіть одне з тверджень на кожне питання.
+            </h2>
+          </div>
+
+
+          <div class="card rounded-5 mb-3 montserrat cardbackgroundcolor">
+            <div class="card-header rounded-top-5 question-header">1) Я відчуваю себе здоровим/ою</div>
+            <div class="card-body answers-spacing">
+              <label
+                ><input type="radio" name="RadioButtonFirstQuestion" value="1" />
+                Так, це правда</label
+              >
+              <br />
+              <label
+                ><input type="radio" name="RadioButtonFirstQuestion" value="2" />
+                Швидше за все це правда</label
+              >
+              <br />
+              <label
+                ><input type="radio" name="RadioButtonFirstQuestion" value="3" />
+                Нейтральна відповідь</label
+              >
+              <br />
+              <label
+                ><input type="radio" name="RadioButtonFirstQuestion" value="4" />
+                Це швидше за все не правда</label
+              >
+              <br />
+              <label
+                ><input type="radio" name="RadioButtonFirstQuestion" value="5" />
+                Ні, це не правда</label
+              >
+            </div>
+          </div>
+
+
+          <div class="card rounded-5 mb-3 montserrat cardbackgroundcolor">
+            <div class="card-header rounded-top-5 question-header">2) Фізично я здатен/на зробити не багато чого</div>
+              <div class="card-body answers-spacing">
+                <label
+                  ><input
+                    type="radio"
+                    name="RadioButtonSecondQuestion"
+                    value="5"
+                  /> Так, це правда</label
+                >
+                <br />
+                <label
+                  ><input
+                    type="radio"
+                    name="RadioButtonSecondQuestion"
+                    value="4"
+                  /> Швидше за все це правда</label
+                >
+                <br />
+                <label
+                  ><input
+                    type="radio"
+                    name="RadioButtonSecondQuestion"
+                    value="3"
+                  /> Нейтральна відповідь</label
+                >
+                <br />
+                <label
+                  ><input
+                    type="radio"
+                    name="RadioButtonSecondQuestion"
+                    value="2"
+                  /> Це швидше за все не правда</label
+                >
+                <br />
+                <label
+                  ><input
+                    type="radio"
+                    name="RadioButtonSecondQuestion"
+                    value="1"
+                  /> Ні, це не правда</label
+                >
+              </div>
+              </div>
+
+
+          <div class="card rounded-5 mb-3 montserrat cardbackgroundcolor">
+                        <div class="card-header rounded-top-5 question-header">
+                          3) Я відчуваю себе активною/ним
+                        </div>
+            <div class="card-body answers-spacing">
+            <label
+              ><input
+                type="radio"
+                name="RadioButtonThirdQuestion"
+                value="1"
+              /> Так, це правда</label
+            >
+            <br />
+            <label
+              ><input
+                type="radio"
+                name="RadioButtonThirdQuestion"
+                value="2"
+              /> Швидше за все це правда</label
+            >
+            <br />
+            <label
+              ><input
+                type="radio"
+                name="RadioButtonThirdQuestion"
+                value="3"
+              /> Нейтральна відповідь</label
+            >
+            <br />
+            <label
+              ><input
+                type="radio"
+                name="RadioButtonThirdQuestion"
+                value="4"
+              /> Це швидше за все не правда</label
+            >
+            <br />
+            <label
+              ><input
+                type="radio"
+                name="RadioButtonThirdQuestion"
+                value="5"
+              /> Ні, це не правда</label
+            >
+          </div>
+          </div>
+
+
+          <div class="card rounded-5 mb-3 montserrat cardbackgroundcolor">
+                        <div class="card-header rounded-top-5 question-header">
+              4) Все що я роблю приносить мені задоволення
+            </div>
+                        <div class="card-body answers-spacing">
+            <label
+              ><input
+                type="radio"
+                name="RadioButtonFourthQuestion"
+                value="1"
+              /> Так, це правда</label
+            >
+            <br />
+            <label
+              ><input
+                type="radio"
+                name="RadioButtonFourthQuestion"
+                value="2"
+              /> Швидше за все це правда</label
+            >
+            <br />
+            <label
+              ><input
+                type="radio"
+                name="RadioButtonFourthQuestion"
+                value="3"
+              /> Нейтральна відповідь</label
+            >
+            <br />
+            <label
+              ><input
+                type="radio"
+                name="RadioButtonFourthQuestion"
+                value="4"
+              /> Це швидше за все не правда</label
+            >
+            <br />
+            <label
+              ><input
+                type="radio"
+                name="RadioButtonFourthQuestion"
+                value="5"
+              /> Ні, це не правда</label
+            >
+          </div>
+          </div>
+
+
+          <div class="card rounded-5 mb-3 montserrat cardbackgroundcolor">
+            <div class="card-header rounded-top-5 question-header">5) Я відчуваю себе втомленим/ною</div>
+               <div class="card-body answers-spacing">
+            <label
+              ><input
+                type="radio"
+                name="RadioButtonFifthQuestion"
+                value="5"
+              /> Так, це правда</label
+            >
+            <br />
+            <label
+              ><input
+                type="radio"
+                name="RadioButtonFifthQuestion"
+                value="4"
+              /> Швидше за все це правда</label
+            >
+            <br />
+            <label
+              ><input
+                type="radio"
+                name="RadioButtonFifthQuestion"
+                value="3"
+              /> Нейтральна відповідь</label
+            >
+            <br />
+            <label
+              ><input
+                type="radio"
+                name="RadioButtonFifthQuestion"
+                value="2"
+              /> Це швидше за все не правда</label
+            >
+            <br />
+            <label
+              ><input
+                type="radio"
+                name="RadioButtonFifthQuestion"
+                value="1"
+              /> Ні, це не правда</label
+            >
+          </div>
+          </div>
+
+
+          <div class="card rounded-5 mb-3 montserrat cardbackgroundcolor">
+            <div class="card-header rounded-top-5 question-header">6) Мені здається, я роблю багато чого за день</div>
+            <div class="card-body answers-spacing">
+            <label
+              ><input
+                type="radio"
+                name="RadioButtonSixthQuestion"
+                value="1"
+              /> Так, це правда</label
+            >
+            <br />
+            <label
+              ><input
+                type="radio"
+                name="RadioButtonSixthQuestion"
+                value="2"
+              /> Швидше за все це правда</label
+            >
+            <br />
+            <label
+              ><input
+                type="radio"
+                name="RadioButtonSixthQuestion"
+                value="3"
+              /> Нейтральна відповідь</label
+            >
+            <br />
+            <label
+              ><input
+                type="radio"
+                name="RadioButtonSixthQuestion"
+                value="4"
+              /> Це швидше за все не правда</label
+            >
+            <br />
+            <label
+              ><input
+                type="radio"
+                name="RadioButtonSixthQuestion"
+                value="5"
+              /> Ні, це не правда</label
+            >
+          </div>
+          </div>
+
+
+          <div class="card rounded-5 mb-3 montserrat cardbackgroundcolor">
+            <div class="card-header rounded-top-5 question-header">
+              7) Коли я чим-небудь займаюсь, то я можу повністю над цим
+              сконцентруватись
+            </div>
+            <div class="card-body answers-spacing">
+            <label
+              ><input
+                type="radio"
+                name="RadioButtonSeventhQuestion"
+                value="1"
+              /> Так, це правда</label
+            >
+            <br />
+            <label
+              ><input
+                type="radio"
+                name="RadioButtonSeventhQuestion"
+                value="2"
+              /> Швидше за все це правда</label
+            >
+            <br />
+            <label
+              ><input
+                type="radio"
+                name="RadioButtonSeventhQuestion"
+                value="3"
+              /> Нейтральна відповідь</label
+            >
+            <br />
+            <label
+              ><input
+                type="radio"
+                name="RadioButtonSeventhQuestion"
+                value="4"
+              /> Це швидше за все не правда</label
+            >
+            <br />
+            <label
+              ><input
+                type="radio"
+                name="RadioButtonSeventhQuestion"
+                value="5"
+              /> Ні, це не правда</label
+            >
+          </div>
+          </div>
+
+          
+          <div class="card rounded-5 mb-3 montserrat cardbackgroundcolor">
+            <div class="card-header rounded-top-5 question-header">8) Фізично я здатен/на на багато чого</div>
+            <div class="card-body answers-spacing">
+            <label
+              ><input
+                type="radio"
+                name="RadioButtonEighthQuestion"
+                value="1"
+              /> Так, це правда</label
+            >
+            <br />
+            <label
+              ><input
+                type="radio"
+                name="RadioButtonEighthQuestion"
+                value="2"
+              /> Швидше за все це правда</label
+            >
+            <br />
+            <label
+              ><input
+                type="radio"
+                name="RadioButtonEighthQuestion"
+                value="3"
+              /> Нейтральна відповідь</label
+            >
+            <br />
+            <label
+              ><input
+                type="radio"
+                name="RadioButtonEighthQuestion"
+                value="4"
+              /> Це швидше за все не правда</label
+            >
+            <br />
+            <label
+              ><input
+                type="radio"
+                name="RadioButtonEighthQuestion"
+                value="5"
+              /> Ні, це не правда</label
+            >
+          </div>
+          </div>
+
+
+          <div class="card rounded-5 mb-3 montserrat cardbackgroundcolor">
+            <div class="card-header rounded-top-5 question-header">9) Я змушую себе робити деякі речі</div>
+            <div class="card-body answers-spacing">
+            <label
+              ><input
+                type="radio"
+                name="RadioButtonNinethQuestion"
+                value="5"
+              /> Так, це правда</label
+            >
+            <br />
+            <label
+              ><input
+                type="radio"
+                name="RadioButtonNinethQuestion"
+                value="4"
+              /> Швидше за все це правда</label
+            >
+            <br />
+            <label
+              ><input
+                type="radio"
+                name="RadioButtonNinethQuestion"
+                value="3"
+              /> Нейтральна відповідь</label
+            >
+            <br />
+            <label
+              ><input
+                type="radio"
+                name="RadioButtonNinethQuestion"
+                value="2"
+              /> Це швидше за все не правда</label
+            >
+            <br />
+            <label
+              ><input
+                type="radio"
+                name="RadioButtonNinethQuestion"
+                value="1"
+              /> Ні, це не правда</label
+            >
+          </div>
+          </div>
+
+
+          <div class="card rounded-5 mb-3 montserrat cardbackgroundcolor">
+            <div class="card-header rounded-top-5 question-header">10) Я гадаю, що я дуже мало справ роблю за день</div>
+            <div class="card-body answers-spacing">
+            <label
+              ><input
+                type="radio"
+                name="RadioButtonTenthQuestion"
+                value="5"
+              /> Так, це правда</label
+            >
+            <br />
+            <label
+              ><input
+                type="radio"
+                name="RadioButtonTenthQuestion"
+                value="4"
+              /> Швидше за все це правда</label
+            >
+            <br />
+            <label
+              ><input
+                type="radio"
+                name="RadioButtonTenthQuestion"
+                value="3"
+              /> Нейтральна відповідь</label
+            >
+            <br />
+            <label
+              ><input
+                type="radio"
+                name="RadioButtonTenthQuestion"
+                value="2"
+              /> Це швидше за все не правда</label
+            >
+            <br />
+            <label
+              ><input
+                type="radio"
+                name="RadioButtonTenthQuestion"
+                value="1"
+              /> Ні, це не правда</label
+            >
+          </div>
+          </div>
+
+
+          <div class="card rounded-5 mb-3 montserrat cardbackgroundcolor">
+            <div class="card-header rounded-top-5 question-header">11) Я можу сконцентрувати увагу на чомусь</div>
+            <div class="card-body answers-spacing">
+            <label
+              ><input
+                type="radio"
+                name="RadioButtonEleventhQuestion"
+                value="1"
+              /> Так, це правда</label
+            >
+            <br />
+            <label
+              ><input
+                type="radio"
+                name="RadioButtonEleventhQuestion"
+                value="2"
+              /> Швидше за все це правда</label
+            >
+            <br />
+            <label
+              ><input
+                type="radio"
+                name="RadioButtonEleventhQuestion"
+                value="3"
+              /> Нейтральна відповідь</label
+            >
+            <br />
+            <label
+              ><input
+                type="radio"
+                name="RadioButtonEleventhQuestion"
+                value="4"
+              /> Це швидше за все не правда</label
+            >
+            <br />
+            <label
+              ><input
+                type="radio"
+                name="RadioButtonEleventhQuestion"
+                value="5"
+              /> Ні, це не правда</label
+            >
+          </div>
+          </div>
+
+
+          <div class="card rounded-5 mb-3 montserrat cardbackgroundcolor">
+            <div class="card-header rounded-top-5 question-header">12) Я відчуваю себе відпочившим/ою</div>
+            <div class="card-body answers-spacing">
+            <label
+              ><input
+                type="radio"
+                name="RadioButtonTwelfthQuestion"
+                value="1"
+              /> Так, це правда</label
+            >
+            <br />
+            <label
+              ><input
+                type="radio"
+                name="RadioButtonTwelfthQuestion"
+                value="2"
+              /> Швидше за все це правда</label
+            >
+            <br />
+            <label
+              ><input
+                type="radio"
+                name="RadioButtonTwelfthQuestion"
+                value="3"
+              /> Нейтральна відповідь</label
+            >
+            <br />
+            <label
+              ><input
+                type="radio"
+                name="RadioButtonTwelfthQuestion"
+                value="4"
+              /> Це швидше за все не правда</label
+            >
+            <br />
+            <label
+              ><input
+                type="radio"
+                name="RadioButtonTwelfthQuestion"
+                value="5"
+              /> Ні, це не правда</label
+            >
+          </div>
+          </div>
+
+
+          <div class="card rounded-5 mb-3 montserrat cardbackgroundcolor">
+            <div class="card-header rounded-top-5 question-header">
+              13) Мені потрібно багато зусиль щоб сконцентруватись на чомусь
+            </div>
+            <div class="card-body answers-spacing">
+            <label
+              ><input
+                type="radio"
+                name="RadioButtonTherteenthQuestion"
+                value="5"
+              /> Так, це правда</label
+            >
+            <br />
+            <label
+              ><input
+                type="radio"
+                name="RadioButtonTherteenthQuestion"
+                value="4"
+              /> Швидше за все це правда</label
+            >
+            <br />
+            <label
+              ><input
+                type="radio"
+                name="RadioButtonTherteenthQuestion"
+                value="3"
+              /> Нейтральна відповідь</label
+            >
+            <br />
+            <label
+              ><input
+                type="radio"
+                name="RadioButtonTherteenthQuestion"
+                value="2"
+              /> Це швидше за все не правда</label
+            >
+            <br />
+            <label
+              ><input
+                type="radio"
+                name="RadioButtonTherteenthQuestion"
+                value="1"
+              /> Ні, це не правда</label
+            >
+          </div>
+          </div>
+
+
+          <div class="card rounded-5 mb-3 montserrat cardbackgroundcolor">
+            <div class="card-header rounded-top-5 question-header">14) Фізично, відчуваю себе не в гарній формі</div>
+            <div class="card-body answers-spacing">
+            <label
+              ><input
+                type="radio"
+                name="RadioButtonFourteenthQuestion"
+                value="5"
+              /> Так, це правда</label
+            >
+            <br />
+            <label
+              ><input
+                type="radio"
+                name="RadioButtonFourteenthQuestion"
+                value="4"
+              /> Швидше за все це правда</label
+            >
+            <br />
+            <label
+              ><input
+                type="radio"
+                name="RadioButtonFourteenthQuestion"
+                value="3"
+              /> Нейтральна відповідь</label
+            >
+            <br />
+            <label
+              ><input
+                type="radio"
+                name="RadioButtonFourteenthQuestion"
+                value="2"
+              /> Це швидше за все не правда</label
+            >
+            <br />
+            <label
+              ><input
+                type="radio"
+                name="RadioButtonFourteenthQuestion"
+                value="1"
+              /> Ні, це не правда</label
+            >
+          </div>
+          </div>
+
+
+          <div class="card rounded-5 mb-3 montserrat cardbackgroundcolor">
+            <div class="card-header rounded-top-5 question-header">15) В мене багато планів</div>
+            <div class="card-body answers-spacing">
+            <label
+              ><input
+                type="radio"
+                name="RadioButtonFifteenthQuestion"
+                value="1"
+              /> Так, це правда</label
+            >
+            <br />
+            <label
+              ><input
+                type="radio"
+                name="RadioButtonFifteenthQuestion"
+                value="2"
+              /> Швидше за все це правда</label
+            >
+            <br />
+            <label
+              ><input
+                type="radio"
+                name="RadioButtonFifteenthQuestion"
+                value="3"
+              /> Нейтральна відповідь</label
+            >
+            <br />
+            <label
+              ><input
+                type="radio"
+                name="RadioButtonFifteenthQuestion"
+                value="4"
+              /> Це швидше за все не правда</label
+            >
+            <br />
+            <label
+              ><input
+                type="radio"
+                name="RadioButtonFifteenthQuestion"
+                value="5"
+              /> Ні, це не правда</label
+            >
+          </div>
+          </div>
+
+
+          <div class="card rounded-5 mb-3 montserrat cardbackgroundcolor">
+            <div class="card-header rounded-top-5 question-header">16) Я швидко втомлююся</div>
+            <div class="card-body answers-spacing">
+            <label
+              ><input
+                type="radio"
+                name="RadioButtonSixteenthQuestion"
+                value="5"
+              /> Так, це правда</label
+            >
+            <br />
+            <label
+              ><input
+                type="radio"
+                name="RadioButtonSixteenthQuestion"
+                value="4"
+              /> Швидше за все це правда</label
+            >
+            <br />
+            <label
+              ><input
+                type="radio"
+                name="RadioButtonSixteenthQuestion"
+                value="3"
+              /> Нейтральна відповідь</label
+            >
+            <br />
+            <label
+              ><input
+                type="radio"
+                name="RadioButtonSixteenthQuestion"
+                value="2"
+              /> Це швидше за все не правда</label
+            >
+            <br />
+            <label
+              ><input
+                type="radio"
+                name="RadioButtonSixteenthQuestion"
+                value="1"
+              /> Ні, це не правда</label
+            >
+          </div>
+          </div>
+
+
+          <div class="card rounded-5 mb-3 montserrat cardbackgroundcolor">
+            <div class="card-header rounded-top-5 question-header">17) Я встигаю зробити дуже мало справ</div>
+            <div class="card-body answers-spacing">
+            <label
+              ><input
+                type="radio"
+                name="RadioButtonSeventeenthQuestion"
+                value="5"
+              /> Так, це правда</label
+            >
+            <br />
+            <label
+              ><input
+                type="radio"
+                name="RadioButtonSeventeenthQuestion"
+                value="4"
+              /> Швидше за все це правда</label
+            >
+            <br />
+            <label
+              ><input
+                type="radio"
+                name="RadioButtonSeventeenthQuestion"
+                value="3"
+              /> Нейтральна відповідь</label
+            >
+            <br />
+            <label
+              ><input
+                type="radio"
+                name="RadioButtonSeventeenthQuestion"
+                value="2"
+              /> Це швидше за все не правда</label
+            >
+            <br />
+            <label
+              ><input
+                type="radio"
+                name="RadioButtonSeventeenthQuestion"
+                value="1"
+              /> Ні, це не правда</label
+            >
+          </div>
+          </div>
+
+
+          <div class="card rounded-5 mb-3 montserrat cardbackgroundcolor">
+            <div class="card-header rounded-top-5 question-header">18) Мені здається, я роблю дуже мало справ за день</div>
+            <div class="card-body answers-spacing">
+            <label
+              ><input
+                type="radio"
+                name="RadioButtonEighteenthQuestion"
+                value="5"
+              /> Так, це правда</label
+            >
+            <br />
+            <label
+              ><input
+                type="radio"
+                name="RadioButtonEighteenthQuestion"
+                value="4"
+              /> Швидше за все це правда</label
+            >
+            <br />
+            <label
+              ><input
+                type="radio"
+                name="RadioButtonEighteenthQuestion"
+                value="3"
+              /> Нейтральна відповідь</label
+            >
+            <br />
+            <label
+              ><input
+                type="radio"
+                name="RadioButtonEighteenthQuestion"
+                value="2"
+              /> Це швидше за все не правда</label
+            >
+            <br />
+            <label
+              ><input
+                type="radio"
+                name="RadioButtonEighteenthQuestion"
+                value="1"
+              /> Ні, це не правда</label
+            >
+          </div>
+          </div>
+
+
+          <div class="card rounded-5 mb-3 montserrat cardbackgroundcolor">
+            <div class="card-header rounded-top-5 question-header">19) Мої думки часто плутаються</div>
+            <div class="card-body answers-spacing">
+            <label
+              ><input
+                type="radio"
+                name="RadioButtonNineteenthQuestion"
+                value="5"
+              /> Так, це правда</label
+            >
+            <br />
+            <label
+              ><input
+                type="radio"
+                name="RadioButtonNineteenthQuestion"
+                value="4"
+              /> Швидше за все це правда</label
+            >
+            <br />
+            <label
+              ><input
+                type="radio"
+                name="RadioButtonNineteenthQuestion"
+                value="3"
+              /> Нейтральна відповідь</label
+            >
+            <br />
+            <label
+              ><input
+                type="radio"
+                name="RadioButtonNineteenthQuestion"
+                value="2"
+              /> Це швидше за все не правда</label
+            >
+            <br />
+            <label
+              ><input
+                type="radio"
+                name="RadioButtonNineteenthQuestion"
+                value="1"
+              /> Ні, це не правда</label
+            >
+          </div>
+          </div>
+
+          
+          <div class="card rounded-5 mb-3 montserrat cardbackgroundcolor">
+            <div class="card-header rounded-top-5 question-header">20) Фізично я відчуваю себе в гарній формі</div>
+            <div class="card-body answers-spacing">
+            <label
+              ><input
+                type="radio"
+                name="RadioButtonTwenthythQuestion"
+                value="1"
+              /> Так, це правда</label
+            >
+            <br />
+            <label
+              ><input
+                type="radio"
+                name="RadioButtonTwenthythQuestion"
+                value="2"
+              /> Швидше за все це правда</label
+            >
+            <br />
+            <label
+              ><input
+                type="radio"
+                name="RadioButtonTwenthythQuestion"
+                value="3"
+              /> Нейтральна відповідь</label
+            >
+            <br />
+            <label
+              ><input
+                type="radio"
+                name="RadioButtonTwenthythQuestion"
+                value="4"
+              /> Це швидше за все не правда</label
+            >
+            <br />
+            <label
+              ><input
+                type="radio"
+                name="RadioButtonTwenthythQuestion"
+                value="5"
+              /> Ні, це не правда</label
+            >
+          </div>
+          </div>
+
+          
+              <a href="#" onclick="calculateScore(); return false;" class="btn btn-success" style="background-color:#FF6600; width: 15%; height: 1%; padding-top: 2.5%; font-weight: 600; font-size: 110%;">Результат</a>
+        </div>
+      </div>
+    </div>
+
+
+
+    <script>
+      // function calculateScore() {
+      //   const names = [
+      //     "RadioButtonFirstQuestion",
+      //     "RadioButtonSecondQuestion",
+      //     "RadioButtonThirdQuestion",
+      //     "RadioButtonFourthQuestion",
+      //     "RadioButtonFifthQuestion",
+      //     "RadioButtonSixthQuestion",
+      //     "RadioButtonSeventhQuestion",
+      //     "RadioButtonEighthQuestion",
+      //     "RadioButtonNinethQuestion",
+      //     "RadioButtonTenthQuestion",
+      //     "RadioButtonEleventhQuestion",
+      //     "RadioButtonTwelfthQuestion",
+      //     "RadioButtonTherteenthQuestion",
+      //     "RadioButtonFourteenthQuestion",
+      //     "RadioButtonFifteenthQuestion",
+      //     "RadioButtonSixteenthQuestion",
+      //     "RadioButtonSeventeenthQuestion",
+      //     "RadioButtonEighteenthQuestion",
+      //     "RadioButtonNineteenthQuestion",
+      //     "RadioButtonTwenthythQuestion",
+      //   ];
+
+      //   let total = 0;
+
+      //   for (let name of names) {
+      //     const radios = document.getElementsByName(name);
+      //     let checkedFound = false;
+
+      //     for (let radio of radios) {
+      //       if (radio.checked) {
+      //         const val = Number(radio.value);
+      //         total += val;
+      //         checkedFound = true;
+      //         console.log(name + " выбран: " + val);
+      //       }
+      //     }
+
+      //     if (!checkedFound) {
+      //       console.warn("Вопрос " + name + " не выбран!");
+      //     }
+      //   }
+
+      //   console.log("Сумма всех выбранных ответов: " + total);
+      //   localStorage.setItem("score", total);
+      //   window.location.href = "PageResult.html";
+      // }
+        function calculateScore() {
+    const names = [
+      "RadioButtonFirstQuestion",
+      "RadioButtonSecondQuestion",
+      "RadioButtonThirdQuestion",
+      "RadioButtonFourthQuestion",
+      "RadioButtonFifthQuestion",
+      "RadioButtonSixthQuestion",
+      "RadioButtonSeventhQuestion",
+      "RadioButtonEighthQuestion",
+      "RadioButtonNinethQuestion",
+      "RadioButtonTenthQuestion",
+      "RadioButtonEleventhQuestion",
+      "RadioButtonTwelfthQuestion",
+      "RadioButtonTherteenthQuestion",
+      "RadioButtonFourteenthQuestion",
+      "RadioButtonFifteenthQuestion",
+      "RadioButtonSixteenthQuestion",
+      "RadioButtonSeventeenthQuestion",
+      "RadioButtonEighteenthQuestion",
+      "RadioButtonNineteenthQuestion",
+      "RadioButtonTwenthythQuestion",
+    ];
+
+    let total = 0;
+
+    for (let name of names) {
+      const radios = document.getElementsByName(name);
+      let checkedFound = false;
+
+      for (let radio of radios) {
+        if (radio.checked) {
+          const val = Number(radio.value);
+          total += val;
+          checkedFound = true;
+          console.log(name + " выбран: " + val);
+        }
+      }
+
+      if (!checkedFound) {
+        console.warn("Вопрос " + name + " не выбран!");
+
+        // Переместить пользователя к первому радио этого вопроса
+        if (radios.length > 0) {
+          radios[0].scrollIntoView({ behavior: "smooth", block: "center" });
+          radios[0].focus();
+        }
+
+        // alert("Вы не ответили на вопрос. Пожалуйста, выберите вариант.");
+        return; // остановить выполнение, пока не ответит
+      }
+    }
+
+    console.log("Сумма всех выбранных ответов: " + total);
+    localStorage.setItem("score", total);
+    window.location.href = "PageResult.html";
+  }
+    </script>
+  </body>
+</html>

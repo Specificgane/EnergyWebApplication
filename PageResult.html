@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Result Page</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <style>
+      @font-face {
+        font-family: "CenturyGothic";
+        src: url("fonts/centurygothic.ttf") format("truetype");
+        font-weight: 400; /* обычный */
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: "CenturyGothic";
+        src: url("fonts/centurygothic_bold.ttf") format("truetype");
+        font-weight: 700; /* жирный */
+        font-style: normal;
+      }
+
+      body {
+        background: linear-gradient(to right, #6ba0f0, #ffe5cc, #6ba0f0);
+      }
+      .customheadertextfontmontserrat {
+        font-family: "CenturyGothic", sans-serif;
+        font-size: 48px;
+        font-weight: 600;
+        letter-spacing: 2px;
+        margin-bottom: 10px;
+      }
+      .custommaintextfontmontserrat {
+        font-family: "CenturyGothic", sans-serif;
+        font-size: 24px;
+        font-weight: 300;
+        letter-spacing: 2px;
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-3"></div>
+        <div class="col-lg-6">
+          <img
+            src="img/HeaderImage.jpg"
+            style="display: block; margin: 0 auto"
+            class="img-fluid"
+          />
+          <div class="customheadertextfontmontserrat">
+            Діагностика рівня втоми
+          </div>
+          <div
+            class="custommaintextfontmontserrat"
+            style="font-weight: 600; font-size: 36px"
+          >
+            Ваш Результат: <span id="result">Result</span>
+          </div>
+          <div class="custommaintextfontmontserrat">
+            Класифікація ступенів астенічного синдроми:
+            <ul>
+              <li>
+                кількість балів 30-40 -легкий прояв астенії (коригується зміною
+                способу життя)
+              </li>
+              <li>
+                кількість балів 40-60 - астенія середнього ступеня (потрібна
+                консультація спеціаліста та протиастенічні препарати)
+              </li>
+              <li>
+                кількість балів 60 і більше - тяжка форма астенії (негайна
+                консультація спеціаліста та комплексне ліікування)
+              </li>
+            </ul>
+          </div>
+          <div class="custommaintextfontmontserrat text-right" style="color:#ee6f1b; font-weight: 600;display: flex; justify-content: space-between; align-items: center; margin-right: 110px;">
+            Час увімкнути свою енергію!
+            <div>
+              Тисни Скоріше!!!
+            </div>
+          </div>
+          <div style="display: flex; justify-content: space-between; align-items: center; gap: 100px;">
+            <img src="img/EnerionTabletsImage.avif" width="50%">
+            <a
+              href="https://tabletki.ua/%D0%AD%D0%BD%D0%B5%D1%80%D0%B8%D0%BE%D0%BD/24595/"
+              target="_blank"
+            >
+              <img src="img/EnerionSiteImage.png" width="70%"/>
+            </a>
+          </div>
+          <div class="custommaintextfontmontserrat" style="font-weight: 600;">
+            Детальна інформація про доведене лікування симптомів астенії з Енеріон від команії Servier
+          </div>
+          <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe 
+    src="https://docs.google.com/presentation/d/1K0FK5IkurDw054piUTrEYW7CtO0C0hRU/embed?start=false&loop=false&delayms=3000" 
+    frameborder="0" 
+    allowfullscreen 
+    style="position: absolute; top:0; left:0; width:100%; height:100%;">
+  </iframe>
+</div>
+        </div>
+        <div class="col-lg-3">
+        </div>
+      </div>
+      <!-- </div>
+      <a
+        href="http://docs.google.com/presentation/d/1K0FK5IkurDw054piUTrEYW7CtO0C0hRU/present"
+        target="_blank"
+        ><b> У компанії Servier Є Рішення! </b></a
+      >
+    </div>
+    <br /> -->
+    <script>
+      const score = localStorage.getItem("score");
+      document.getElementById("result").textContent = score;
+    </script>
+    <!-- <a href="Index.html" class="button">Back</a> -->
+  </body>
+</html>
